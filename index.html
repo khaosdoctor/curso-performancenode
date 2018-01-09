@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Curso - Introdução ao React - Code Prestige</title>
+
+		<meta name="description" content="Curso de Introdução ao React da Code Prestige">
+		<meta name="author" content="Diego Martins de Pinho">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>React para Iniciantes</h1>
+					<h4>Curso introdutório a biblioteca do Facebook</h3>
+					<p>
+						<small>
+							Instrutor: <a href="http://www.diegopinho.com.br" target="_blank">Diego Martins de Pinho</a>
+						</small>
+					</p>
+					<p>
+						<small>
+							Realização: <a href="http://www.codeprestige.com.br" target="_blank">Code Prestige</a>		
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Code Prestige</h2>
+					<p>
+						A Code Prestige é uma escola especializada no ensino de programação. Desenvolvemos diariamente artigos, cursos, livros digitais, vídeos e outros conteúdos que já auxiliaram mais de 4000 pessoas de todo o Brasil a alcançarem seus objetivos profissionais.
+					</p>
+					<p><small>Visite o nosso site! <br/><a href="http://www.codeprestige.com.br/">Code Prestige</a></small></p>
+				</section>
+
+				<section>
+					<h2>Instrutor</h2>
+					<div id="left">
+						<img data-src="https://avatars2.githubusercontent.com/u/4473622" />
+					</div>
+					
+					<div id="right">
+						<ul>
+							<li><b>Nome:</b> Diego M. de Pinho</li>
+							<li><b>Idade:</b> 25 anos</li>
+							<li><b>Minibio:</b> Cofundador da CodePrestige, autor de livros pela Casa do Código, palestrante em eventos e eterno estudante.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Requisitos</h2>
+					<ul>
+						<li><a href="https://nodejs.org/en/" target="_blank">Node (versão > 6 LTS)</a></li>
+						<li><a href="https://www.npmjs.com/" target="_blank">npm (versão > 3.x)</a></li>
+						<li><a href="https://github.com/facebookincubator/create-react-app" target="_blank">create-react-app</a></li>
+						<li>Editor de texto</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>O que é o React?</h2>
+						<p>
+							O React é uma <b>biblioteca</b> JavaScript para criação de <b>interfaces de usuário</b> em aplicações web, que foi idealizada pelo time de desenvolvimento do Facebook.
+						</p>
+					</section>
+
+					<section>
+						<ul>
+							<li>Versão atual: 16.X</li>
+							<li>Criada por: Jordan Walke, engenheiro do Facebook</li>
+							<li>Primeiro release: Maio de 2013 na JSConf US</li>
+							<li>Utilizado por grandes empresas: Facebook, Instagram, Netflix, Sony etc...</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Mas pra que serve?</h1>
+						<p><small>O React foi desenvolvido com a seguinte missão:</small></p>
+						<p>Como construir grandes aplicações com muitos dados que mudam frequentemente?</p>
+					</section>
+
+					<section>
+						<ul>
+							<li>Focar somente na View</li>
+							<li>Utilizar o Virtual DOM</li>
+							<li>Trabalhar com componentes</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h1>Legal, mas... Como tudo isso funciona?</h1>
+					</section>
+
+					<section>
+						<h1>Como já dizia o Jack Estripador:</h1>
+						<p>“Vamos por Partes”</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Exercício 1</h1>
+					</section>
+					<section>
+						<h2>Objetivo</h2>
+						<p>Criar um aplicativo com o create-react-app</p>
+					</section>
+					<section>
+						<ol>
+							<li>Abrir o terminal</li>
+							<li>Escolher um diretório</li>
+							<li>Executar o comando <pre><code class="hlbash" data-trim contenteditable>create-react-app nome_do_projeto</code></pre>
+							<li>Fazer networking enquanto ele cria o seu projeto =)</li>
+							<li>Abrir o projeto no seu editor de texto</li>
+							<li>Voltar ao terminal e subir o projeto com o comando <pre><code class="hlbash" data-trim contenteditable>npm start</code></pre></li>
+							<li>Alterar a mensagem para “O curso de React é demais”</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>create-react-app</h2>
+						<p>O <i>create-react-app</i> é um pacote que nos permite criar aplicações web utilizando o React <b>sem a necessidade fazer qualquer configuração</b>. Todas as ferramentas necessárias para desenvolvimento e deploy já estão embutidas.</p>
+					</section>
+					
+					<section>
+						<h2>Alguns dos plugins já configurados:</h2>
+						<ul>
+							<li>auto-prefixer</li>
+							<li>eslint</li>
+							<li>webpack</li>
+							<li>babel</li>
+							<li>jest</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Estrutura do Projeto</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Arquivo</th>
+									<th>Descrição</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><small>README.md</small></td>
+									<td><small>Arquivo de orientações do create-react-app. Está em inglês.</small></td>
+								</tr>
+								<tr>
+									<td><small>node_modules/</small></td>
+									<td><small>Todas as dependências necessárias para o projeto.</small></td>
+								</tr>
+								<tr>
+									<td><small>package.json</small></td>
+									<td><small>Arquivo de descrição do projeto. Possui informações como o nome, autor, versão e as dependências.</small></td>
+								</tr>
+								<tr>
+									<td><small>public/</small></td>
+									<td><small>Diretório que possui os arquivos públicos do seu projeto. Contém o html inicial.</small></td>
+								</tr>
+								<tr>
+									<td><small>src/</small></td>
+									<td><small>Pasta onde está contido todos os recursos do projeto, arquivos de imagem, css, javascript e afins.</small></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<h2>Componentes Padrões</h2>
+						<p><small>Para que o desenvolvedor não comece a desenvolver os componentes do zero, o projeto padrão já vem criado com alguns componentes para inspirar e servir como exemplo:</small></p>
+						<div id="left">
+							<ul>
+								<li>App.css</li>
+								<li>App.js</li>
+								<li>App.test.js</li>
+								<li>index.css</li>
+								<li>index.js</li>
+								<li>logo.svg</li>
+							</ul>
+						</div>
+						<div id="right">
+							<img width="550" data-src="https://cdn-images-1.medium.com/max/1600/1*S1tkR_QoaT8sqcIDsUnLjw.png">
+						</div>
+					</section>
+
+					<section>
+						<h2>Package.json</h2>
+						<p>O package.json é o arquivo que descreve a sua aplicação. Ele contém informações importantes, como o nome do projeto, autor, data, versão, e-mail e a declaração de suas dependências.</p>
+					</section>
+
+					<section>
+						<pre><code class="hljson" data-trim contenteditable>
+							{
+								"dependencies": {
+									"react": "^15.5.4",
+									"react-dom": "^15.5.4"
+								},
+								"scripts": {
+									"start": "react-scripts start",
+									"build": "react-scripts build",
+									"test": "react-scripts test --env=jsdom",
+									"eject": "react-scripts eject"
+								}
+							}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Comandos npm</h2>
+						<table class="ctable">
+							<thead>
+								<tr>
+									<th>Comando</th>
+									<th>O que faz?</th>
+									<th>Resultado</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>start</td>
+									<td>Inicia o servidor de desenvolvimento</td>
+									<td>Na porta 3000 e abre o navegador automaticamente</td>
+								</tr>
+								<tr>
+									<td>test</td>
+									<td>Inicia a execução dos testes</td>
+									<td>Executa os testes utilizando o Jest e exibe os resultados no próprio console</td>
+								</tr>
+								<tr>
+									<td>run build</td>
+									<td>Reúne o aplicativo em arquivos estáticos para produção</td>
+									<td>Compila, traduz, minifica os recursos da aplicação e gera arquivos estáticos</td>
+								</tr>
+								<tr>
+									<td>run eject</td>
+									<td>Remove a dependência do “react-scripts” e copia explicitamente as ferramentas de build, configurações e scripts dentro do diretório da aplicação</td>
+									<td>Remove a dependência do “react-scripts” e deixa tudo manual para controle do desenvolvedor</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<img data-src="https://i.imgur.com/NEY1F0F.png" />
+					</section>
+
+				</section>
+
+				<section>
+					<section><h1>Exercício 2</h1></section>
+					<section>
+						<h2>Objetivo</h2>
+						<p>Criar um novo componente na aplicação</p>
+					</section>
+					<section>
+						<ol>
+							<li>Criar um novo arquivo javascript</li>
+							<li>Usar a estrutura do App.js para montar um novo Componente</li>
+							<li>Inserir o novo componente dentro do App</li>
+							<li>Exibir com sucesso na tela o novo Componente</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Componentes React</h2>
+						<p>Todo componente precisa:</p>
+						<ul>
+							<li>importar o módulo React e o Component (classes)</li>
+							<li>estender o Component</li>
+							<li>ter o método render() que retorna o que deve ser renderizado</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Só preciso disso?</h2>
+						<p>
+							Sim. Este é o mínimo necessário para se criar um Componente. Para componentes mais complexos, utilizamos Estados (States) e Propriedades (Props). Vamos usar os dois conceitos para alterar a cor de fundo da nossa página!
+						</p>
+					</section>
+
+					<section>
+						<h1>DEMO</h1>
+					</section>
+
+				</section>
+
+				<section>
+					<h1>O que vimos?</h1>
+					<ul>
+						<li>Como criar um projeto do zero React do zero</li>
+						<li>Subir o projeto para desenvolvimento</li>
+						<li>Criar um novo Componente</li>
+						<li>Incluir um Componente dentro do outro</li>
+						<li>Mudar o estado de um Componente</li>
+						<li>Passar propriedades de um Componente para outro</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Próximos Passos</h1>
+					<ul>
+						<li>Ciclo de vida</li>
+						<li>Melhorias do React 16</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>Projeto Final</h1>
+					</section>
+					<section>
+						<h2>Objetivo</h2>
+						<p>Criar uma página pessoal utilizando o create-react-app</p>
+					</section>
+					<section>
+						<h2>Prazo</h2>
+						<p>1 Semana</p>
+					</section>
+					<section>
+						<h2>Requisitos</h2>
+						<ul>
+							<li>A página deve conter pelo menos uma imagem</li>
+							<li>Deve conter pelo menos 3 componentes (além do App.js)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Desafio</h2>
+						<p>Criar a página de forma responsiva utilizando o <a href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</a></p>
+					</section>
+					<section>
+						<h2>Entrega</h2>
+						<p>A entrega deve ser feita nesta <a href="https://github.com/codeprestige/curso-introducaoreact/issues/1" target="_blank">issue</a> do projeto no GitHub</p>
+					</section>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>Referências</h1>
+					<p>
+						- <a href="https://reactjs.org/" target="_blank">React: Página oficial</a> <br>
+						- <a href="https://github.com/facebookincubator/create-react-app">GitHub: Create-React-App</a> <br>
+						- <a href="https://codeprestige.com.br/ebooks/react/index.html" target="_blank">E-book: Começando com o React</a>
+					</p>
+				</section>
+
+				<section>
+						<h1>Code Prestige</h1>
+						<h3>Ensino de programação</h3>
+					</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
