@@ -256,7 +256,7 @@
         </section>
 
 
-<!--  -->
+<!-- Cache com NGINX -->
 
         <section>
           <section>
@@ -319,14 +319,40 @@
         </section>
 
 
-<!--  -->
+<!-- Conteúdo estático com NGINX -->
 
         <section>
-          <h3>Conteúdo estático sendo servido</h3>
+          <section>
+            <h3>Conteúdo estático sendo servido</h3>
+            <p>O Node não foi feito para isto</p>
+          </section>
+          <section>
+              <h2>Por que não usamos o NGINX?</h2>
+          </section>
+          <section>
+            <h3>Mãos a obra</h3>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+          <section>
+            <h2>Preparando</h2>
+            <ul>
+              <li>Crie uma pasta chamada <code>exemplo-2</code> em qualquer lugar</li>
+              <li>Nela crie um arquivo chamado <code>index.html</code></li>
+              <li>Procure algumas imagens e coloque nesta pasta também</li>
+            </ul>
+          </section>
+          <section>
+            <h2>index.html</h2>
+            <img src="img/ex2/i2.png" alt="" width="400">
+          </section>
+          <section>
+            <p>O NGINX já tem uma imagem pronta para rodar conteúdo estático</p>
+            <img src="img/ex2/i1.png" alt="" width="700">
+          </section>
         </section>
 
 
-<!--  -->
+<!-- Proxy Reverso -->
 
 
         <section>
@@ -356,267 +382,84 @@
         </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section>
-          <section>
-            <h1>Exercício 1</h1>
-          </section>
-          <section>
-            <h2>Objetivo</h2>
-            <p>Criar um aplicativo com o create-react-app</p>
-          </section>
-          <section>
-            <ol>
-              <li>Abrir o terminal</li>
-              <li>Escolher um diretório</li>
-              <li>Executar o comando <pre><code class="hlbash" data-trim contenteditable>create-react-app nome_do_projeto</code></pre>
-              <li>Fazer networking enquanto ele cria o seu projeto =)</li>
-              <li>Abrir o projeto no seu editor de texto</li>
-              <li>Voltar ao terminal e subir o projeto com o comando <pre><code class="hlbash" data-trim contenteditable>npm start</code></pre></li>
-              <li>Alterar a mensagem para “O curso de React é demais”</li>
-            </ol>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>create-react-app</h2>
-            <p>O <i>create-react-app</i> é um pacote que nos permite criar aplicações web utilizando o React <b>sem a necessidade fazer qualquer configuração</b>. Todas as ferramentas necessárias para desenvolvimento e deploy já estão embutidas.</p>
-          </section>
-
-          <section>
-            <h2>Alguns dos plugins já configurados:</h2>
-            <ul>
-              <li>auto-prefixer</li>
-              <li>eslint</li>
-              <li>webpack</li>
-              <li>babel</li>
-              <li>jest</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Estrutura do Projeto</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Arquivo</th>
-                  <th>Descrição</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><small>README.md</small></td>
-                  <td><small>Arquivo de orientações do create-react-app. Está em inglês.</small></td>
-                </tr>
-                <tr>
-                  <td><small>node_modules/</small></td>
-                  <td><small>Todas as dependências necessárias para o projeto.</small></td>
-                </tr>
-                <tr>
-                  <td><small>package.json</small></td>
-                  <td><small>Arquivo de descrição do projeto. Possui informações como o nome, autor, versão e as dependências.</small></td>
-                </tr>
-                <tr>
-                  <td><small>public/</small></td>
-                  <td><small>Diretório que possui os arquivos públicos do seu projeto. Contém o html inicial.</small></td>
-                </tr>
-                <tr>
-                  <td><small>src/</small></td>
-                  <td><small>Pasta onde está contido todos os recursos do projeto, arquivos de imagem, css, javascript e afins.</small></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <h2>Componentes Padrões</h2>
-            <p><small>Para que o desenvolvedor não comece a desenvolver os componentes do zero, o projeto padrão já vem criado com alguns componentes para inspirar e servir como exemplo:</small></p>
-            <div id="left">
-              <ul>
-                <li>App.css</li>
-                <li>App.js</li>
-                <li>App.test.js</li>
-                <li>index.css</li>
-                <li>index.js</li>
-                <li>logo.svg</li>
-              </ul>
-            </div>
-            <div id="right">
-              <img width="550" data-src="https://cdn-images-1.medium.com/max/1600/1*S1tkR_QoaT8sqcIDsUnLjw.png">
-            </div>
-          </section>
-
-          <section>
-            <h2>Package.json</h2>
-            <p>O package.json é o arquivo que descreve a sua aplicação. Ele contém informações importantes, como o nome do projeto, autor, data, versão, e-mail e a declaração de suas dependências.</p>
-          </section>
-
-          <section>
-            <pre><code class="hljson" data-trim contenteditable>
-              {
-                "dependencies": {
-                  "react": "^15.5.4",
-                  "react-dom": "^15.5.4"
-                },
-                "scripts": {
-                  "start": "react-scripts start",
-                  "build": "react-scripts build",
-                  "test": "react-scripts test --env=jsdom",
-                  "eject": "react-scripts eject"
-                }
-              }
-            </code></pre>
-          </section>
-
-          <section>
-            <h2>Comandos npm</h2>
-            <table class="ctable">
-              <thead>
-                <tr>
-                  <th>Comando</th>
-                  <th>O que faz?</th>
-                  <th>Resultado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>start</td>
-                  <td>Inicia o servidor de desenvolvimento</td>
-                  <td>Na porta 3000 e abre o navegador automaticamente</td>
-                </tr>
-                <tr>
-                  <td>test</td>
-                  <td>Inicia a execução dos testes</td>
-                  <td>Executa os testes utilizando o Jest e exibe os resultados no próprio console</td>
-                </tr>
-                <tr>
-                  <td>run build</td>
-                  <td>Reúne o aplicativo em arquivos estáticos para produção</td>
-                  <td>Compila, traduz, minifica os recursos da aplicação e gera arquivos estáticos</td>
-                </tr>
-                <tr>
-                  <td>run eject</td>
-                  <td>Remove a dependência do “react-scripts” e copia explicitamente as ferramentas de build, configurações e scripts dentro do diretório da aplicação</td>
-                  <td>Remove a dependência do “react-scripts” e deixa tudo manual para controle do desenvolvedor</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <img data-src="https://i.imgur.com/NEY1F0F.png" />
-          </section>
-
-        </section>
-
-        <section>
-          <section><h1>Exercício 2</h1></section>
-          <section>
-            <h2>Objetivo</h2>
-            <p>Criar um novo componente na aplicação</p>
-          </section>
-          <section>
-            <ol>
-              <li>Criar um novo arquivo javascript</li>
-              <li>Usar a estrutura do App.js para montar um novo Componente</li>
-              <li>Inserir o novo componente dentro do App</li>
-              <li>Exibir com sucesso na tela o novo Componente</li>
-            </ol>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Componentes React</h2>
-            <p>Todo componente precisa:</p>
-            <ul>
-              <li>importar o módulo React e o Component (classes)</li>
-              <li>estender o Component</li>
-              <li>ter o método render() que retorna o que deve ser renderizado</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Só preciso disso?</h2>
-            <p>
-              Sim. Este é o mínimo necessário para se criar um Componente. Para componentes mais complexos, utilizamos Estados (States) e Propriedades (Props). Vamos usar os dois conceitos para alterar a cor de fundo da nossa página!
-            </p>
-          </section>
-
-          <section>
-            <h1>DEMO</h1>
-          </section>
-
-        </section>
-
-        <section>
-          <h1>O que vimos?</h1>
-          <ul>
-            <li>Como criar um projeto do zero React do zero</li>
-            <li>Subir o projeto para desenvolvimento</li>
-            <li>Criar um novo Componente</li>
-            <li>Incluir um Componente dentro do outro</li>
-            <li>Mudar o estado de um Componente</li>
-            <li>Passar propriedades de um Componente para outro</li>
-          </ul>
-        </section>
-
-        <section>
-          <h1>Próximos Passos</h1>
-          <ul>
-            <li>Ciclo de vida</li>
-            <li>Melhorias do React 16</li>
-          </ul>
-        </section>
-
         <section>
           <section>
             <h1>Projeto Final</h1>
           </section>
           <section>
             <h2>Objetivo</h2>
-            <p>Criar uma página pessoal utilizando o create-react-app</p>
+            <p>Criar um sistema utilizando as boas práticas de programação que vimos</p>
           </section>
           <section>
             <h2>Prazo</h2>
             <p>1 Semana</p>
           </section>
           <section>
-            <h2>Requisitos</h2>
+            <h2>Detalhes do projeto</h2>
+            <p>Uma escola veio até você para pedir que desenvolvesse um sistema para agendar reuniões entre professores e pais de alunos. Eis o que eles disseram:</p>
+          </section>
+          <section>
             <ul>
-              <li>A página deve conter pelo menos uma imagem</li>
-              <li>Deve conter pelo menos 3 componentes (além do App.js)</li>
+              <li>O sistema deve ter uma tela de login</li>
+              <li>O sistema vai ter uma data de abertura, antes dela não é possível se logar</li>
+              <li>O sistema vai ter uma data de fechamento, depois dela não é possível agendar reuniões, apenas ver as já agendadas</li>
+              <li>As listas de professores e pais serão dadas pela escola</li>
+              <li>Os pais terão uma senha gerada pelo programador</li>
+              <li>Cada reunião dura, no máximo, 40 minutos</li>
+              <li>As reuniões devem sempre ser marcadas após as 10 e antes das 17, que é o horário de funcionamento da escola</li>
             </ul>
           </section>
           <section>
-            <h2>Desafio</h2>
-            <p>Criar a página de forma responsiva utilizando o <a href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</a></p>
+            <ul>
+              <li>Um professor só pode ser agendado uma vez por horário</li>
+              <li>Uma vez agendado aquele horário não estará mais disponível para nenhum pai para aquele professor</li>
+              <li>Um pai só pode agendar uma reunião por dia</li>
+            </ul>
+          </section>
+          <section>
+            <p>Dadas estas instruções cabe a você achar a melhor resolução para o problema</p>
+            <ul>
+              <li>Você poderá escolher qualquer arquitetura</li>
+              <li>Você poderá usar qualquer lib no back-end</li>
+              <li>Todos os detalhes técnicos do projeto ficam a seu critério</li>
+            </ul>
+          </section>
+          <section>
+            <h2>O que será dado:</h2>
+            <ul>
+              <li>O front-end estará feito e desenhado (Framework CSS é o <a target="_blank" href="http://bulma.io">Bulma</a>)</li>
+              <li>O banco de dados estará modelado e com dados</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Regras <br> <small>Pra ficar mais legal</small></h2>
+            <ul>
+              <li>Nenhuma lib externa pode ser usada no front-end (todos os arquivos <code>.js</code> devem ser escritos em vanilla)</li>
+              <li><u>Não</u> é permitido o uso de nenhum framework front-end (React, Angular, etc) para montar a tela</li>
+              <li>A stack do front-end deve ser <b>apenas</b> HTML+JS+CSS, nada mais</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Instruções:</h2>
+            <ul>
+              <li>Crie um fork do projeto <a target="_blank" href="http://github.com/khaosdoctor/desafio-curso-performance">Desafio</a> para o seu usuário no Github</li>
+              <li>Todas as instruções estão no README</li>
+            </ul>
           </section>
           <section>
             <h2>Entrega</h2>
-            <p>A entrega deve ser feita nesta <a href="https://github.com/codeprestige/curso-introducaoreact/issues/1" target="_blank">issue</a> do projeto no GitHub</p>
+            <ul>
+              <li>Depois de finalizar o projeto, abra uma <i>pull-request</i> para o repositório original</li>
+              <li>Use o título <code>[Seu nome] - Projeto final</code></li>
+              <li>Escreva quaisquer comentários na descrição da PR</li>
+            </ul>
           </section>
         </section>
 
         <section style="text-align: left;">
           <h1>Referências</h1>
           <p>
-            - <a href="https://reactjs.org/" target="_blank">React: Página oficial</a> <br>
-            - <a href="https://github.com/facebookincubator/create-react-app">GitHub: Create-React-App</a> <br>
-            - <a href="https://codeprestige.com.br/ebooks/react/index.html" target="_blank">E-book: Começando com o React</a>
+            - <a href="https://nodejs.org/" target="_blank">Node.js: Página oficial</a> <br>
           </p>
         </section>
 
