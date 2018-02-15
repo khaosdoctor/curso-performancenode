@@ -18,3 +18,15 @@
 .ctable {
   font-size: 26px !important;
 }
+
+code {
+  color: #ffffff;
+  font-size: 1.5rem !important;
+  background-color: #1b1b1b;
+  border-radius: 5px;
+  padding: 5px !important;
+}
+
+img {
+  border: none !important;
+}

@@ -43,6 +43,15 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+
+
+
+
+
+
+
+
+        <!-- Título -->
         <section>
           <h1>Performance de aplicações Node.js</h1>
           <h4>O Node como você nunca viu</h3>
@@ -58,6 +67,15 @@
           </p>
         </section>
 
+
+
+
+
+
+
+
+
+        <!-- Escola -->
         <section>
           <h2>Code Prestige</h2>
           <p>
@@ -66,6 +84,15 @@
           <p><small>Visite o nosso site! <br/><a href="http://www.codeprestige.com.br/">Code Prestige</a></small></p>
         </section>
 
+
+
+
+
+
+
+
+
+        <!-- Instrutor -->
         <section>
           <h2>Instrutor</h2>
           <div id="left">
@@ -81,6 +108,8 @@
           </div>
         </section>
 
+
+        <!-- Requisitos -->
         <section>
           <h2>Requisitos</h2>
           <ul>
@@ -98,49 +127,247 @@
           </ul>
         </section>
 
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Seção de intro ao Node -->
         <section>
           <section>
-            <h2>O que é o React?</h2>
-            <p>
-              O React é uma <b>biblioteca</b> JavaScript para criação de <b>interfaces de usuário</b> em aplicações web, que foi idealizada pelo time de desenvolvimento do Facebook.
-            </p>
+              <h3>Node.js</h3>
+              <ul>
+                <li>Versão atual: 8.9.4 (LTS) | 9.5.0 (Edge)</li>
+                <li>Criada por: Ryan Dahl, em 2009</li>
+                <li>Primeiro release: Novembro de 2009, na JSConf EU</li>
+                <li>A ideia original veio do loader do Flickr, que tinha que ficar consultando o server para saber o progresso do upload</li>
+              </ul>
           </section>
 
           <section>
-            <ul>
-              <li>Versão atual: 16.X</li>
-              <li>Criada por: Jordan Walke, engenheiro do Facebook</li>
-              <li>Primeiro release: Maio de 2013 na JSConf US</li>
-              <li>Utilizado por grandes empresas: Facebook, Instagram, Netflix, Sony etc...</li>
-            </ul>
+              <h2>Você sabe o que é o Node?</h2>
+              <p>
+                Node.js não é uma <i>linguagem</i> nem uma <i>plataforma</i>, mas sim um <b>runtime</b> de desenvolvimento Javascript.
+              </p>
           </section>
 
           <section>
-            <h1>Mas pra que serve?</h1>
-            <p><small>O React foi desenvolvido com a seguinte missão:</small></p>
-            <p>Como construir grandes aplicações com muitos dados que mudam frequentemente?</p>
+            <h2>E o que significa?</h2>
+            <p>O Node utiliza de uma série de projetos antes criados (como o V8) para a Web para "transpilar" o código JavaScript a fim de que ele também possa rodar no Back-end.</p>
           </section>
 
           <section>
-            <ul>
-              <li>Focar somente na View</li>
-              <li>Utilizar o Virtual DOM</li>
-              <li>Trabalhar com componentes</li>
-            </ul>
+            <h2>Na prática</h2>
           </section>
 
+          <section>
+            <img src="/img/node-turtle.png" alt="">
+          </section>
+
+          <section>
+            <h1>Resumindo...</h1>
+            <p>Node é uma ferramenta que pega seu código JS e compila para C++ a fim de que ele possa ser rodado no servidor.</p>
+          </section>
         </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Explicações do event loop -->
         <section>
           <section>
             <h1>Legal, mas... Como tudo isso funciona?</h1>
           </section>
 
           <section>
-            <h1>Como já dizia o Jack Estripador:</h1>
-            <p>“Vamos por Partes”</p>
+            <h1>O que o Node é:</h1>
+            <ul>
+              <li>Assíncrono</li>
+              <li>Non blocking</li>
+              <li>Single Thread</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>O que o Node <u>não</u> é:</h1>
+            <ul>
+              <li>Multi Core</li>
+              <li>Multi thread</li>
+              <li>A solução de todos os problemas</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Event Loop</h1>
+            <img src="https://camo.githubusercontent.com/c997d19ed67fc0ed69e91cf5e6d43489d767ac60/687474703a2f2f322e62702e626c6f6773706f742e636f6d2f2d576b33436a7a55667375672f56564835492d336d726b492f414141414141414141526b2f78464e5a7a626d5155466b2f73313630302f6c6f6f70322e706e67" alt="">
           </section>
         </section>
+
+
+
+
+
+
+
+
+
+        <!-- Performance -->
+        <section>
+          <section>
+            <h1>Performance com Node.js</h1>
+          </section>
+
+          <section>
+            <h2>Causas de má performance</h2>
+            <ul>
+              <li>Infraestrutura mal organizada</li>
+              <li>Código mal feito</li>
+            </ul>
+          </section>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- Divisão de infraestrutura -->
+        <section>
+          <h1>Infraestrutura</h1>
+        </section>
+
+
+<!--  -->
+
+        <section>
+          <section>
+            <h3>Processamento desnecessário</h3>
+            <p>Quando a mesma request é feita várias vezes seguidas</p>
+          </section>
+
+          <section>
+              <h2>Solução: Cache</h2>
+          </section>
+
+          <section>
+            <img src="img/cachenginx.png" alt="">
+          </section>
+
+          <section>
+            <h3>Mãos a obra</h3>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+
+          <section>
+            <h2>Preparando</h2>
+            <ul>
+              <li>Crie uma pasta chamada <code>exemplo-1</code> em qualquer lugar</li>
+              <li>Nela crie um arquivo chamado <code>nginx.conf</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>nginx.conf</h2>
+            <img src="img/ex1/i1.png" alt="" width="500">
+          </section>
+
+          <section>
+            <h2>criando o cache</h2>
+            <img src="img/ex1/i2.png" alt="" width="500">
+          </section>
+
+          <section>
+            <h2>aplicando o cache</h2>
+            <img src="img/ex1/i3.png" alt="" width="500">
+          </section>
+
+          <section>
+            <h2>Dockerfile</h2>
+            <p>Crie um arquivo <code>Dockerfile</code></p>
+            <img src="img/ex1/i4.png" alt="" width="500">
+          </section>
+
+          <section>
+            <h2>Rodando</h2>
+            <img src="img/ex1/i5.png" alt="" width="500">
+          </section>
+
+          <section>
+            <h2>Mais além</h2>
+            <img src="img/ex1/i6.png" alt="" width="650">
+          </section>
+
+        </section>
+
+
+<!--  -->
+
+        <section>
+          <h3>Conteúdo estático sendo servido</h3>
+        </section>
+
+
+<!--  -->
+
+
+        <section>
+          <h3>Mau gerenciamento de conexões</h3>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Divisão de código -->
+        <section>
+          <section>
+            <h1>Código</h1>
+          </section>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section>
           <section>
