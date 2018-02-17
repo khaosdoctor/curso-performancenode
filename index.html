@@ -94,18 +94,31 @@
 
         <!-- Instrutor -->
         <section>
-          <h2>Instrutor</h2>
-          <div id="left">
-            <img data-src="https://s.gravatar.com/avatar/ce3a5c87b336b0a3f582055f38a5d78f?s=480&r=pg" />
-          </div>
+          <section>
+            <h2>Instrutor</h2>
+            <div>
+              <img data-src="https://s.gravatar.com/avatar/ce3a5c87b336b0a3f582055f38a5d78f?s=480&r=pg" />
+            </div>
+          </section>
 
-          <div id="right">
+          <section>
+            <div>
+              <ul>
+                <li><b>Nome:</b> Lucas Santos</li>
+                <li><b>Idade:</b> 22 anos</li>
+                <li><b>Minibio:</b> Membro de comunidades como o <a target="_blank" href="http://trainingcenter.io">Training Center</a>, organiza eventos como o <a target="_blank" href="http://2018.abcdevelopers.org">ABC Dev</a>, escrever algumas besteiras no <a href="https://medium.com/@khaosdoctor">Medium</a> e adora ensinar outras pessoas sobre o que aprendeu como profissional de desenvolvimento desde 2011.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Redes sociais</h2>
             <ul>
-              <li><b>Nome:</b> Lucas Santos</li>
-              <li><b>Idade:</b> 22 anos</li>
-              <li><b>Minibio:</b> Membro de comunidades como o <a target="_blank" href="http://trainingcenter.io">Training Center</a>, organiza eventos como o <a target="_blank" href="http://2018.abcdevelopers.org">ABC Dev</a>, escrever algumas besteiras no Medium e adora ensinar outras pessoas sobre o que aprendeu como profissional de desenvolvimento desde 2011.</li>
+              <li>Twitter: <a href="http://twitter.com/_staticvoid">@_staticvoid</a></li>
+              <li>Github: <a href="http://github.com/khaosdoctor">khaosdoctor</a></li>
+              <li>Site: <a href="https://lsantos.me">lsantos.me</a></li>
             </ul>
-          </div>
+          </section>
         </section>
 
 
@@ -234,10 +247,15 @@
 
           <section>
             <h2>Causas de má performance</h2>
-            <ul>
-              <li>Infraestrutura mal organizada</li>
-              <li>Código mal feito</li>
-            </ul>
+          </section>
+
+          <section>
+            <img src="https://cdn-thinkcomputers.netdna-ssl.com/wp-content/uploads/2014/03/cablemess-2.jpg" alt="Bad infra">
+            <p>Má infraestrutura</p>
+          </section>
+          <section>
+            <img src="https://camo.githubusercontent.com/cd64dd31db1acb25412a6c52e90e60d09cb17563/68747470733a2f2f6272756e6f6c6d2e66696c65732e776f726470726573732e636f6d2f323031372f30312f6861646f756b656e2d636f64652e6a7067" alt="Hadouken Code">
+            <p>Código mal escrito</p>
           </section>
         </section>
 
@@ -357,8 +375,58 @@
 
 
         <section>
-          <h3>Mau gerenciamento de conexões</h3>
-          <!-- Proxy Reverso -->
+          <section>
+            <h3>Mau gerenciamento de conexões</h3>
+            <ul>
+              <li>O Node não é feito para gerenciar muitas conexões juntas</li>
+              <li>Quando há um aumento repentino de conexões, é possível que a aplicação caia</li>
+              <li>Servidores próprios como o Apache e o Nginx são melhores</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Solução: Proxy reverso</h2>
+          </section>
+          <section>
+            <img src="http://jamesthom.as/images/reverse_proxy.png" alt="Reverse proxy">
+          </section>
+          <section>
+            <h3>Mãos a obra</h3>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+          <section>
+            <p>Clone o projeto com os exemplos</p>
+            <img src="./img/clone.png" alt="">
+          </section>
+          <section>
+            <p>Vamos para <code>exemplo-nginx-reverseproxy-docker</code></p>
+          </section>
+          <section>
+            <p>Veja o arquivo <code>nginx.conf</code></p>
+            <img src="./img/reverseproxy-nginxconf.png" alt="" width="700">
+          </section>
+          <section>
+            <p>Tipo Round Robin - Um de cada vez</p>
+            <img src="./img/reverseproxy-nginxconf-roundrobin.png" alt="" width="700">
+          </section>
+          <section>
+            <p>Tipo IP Hash - Sempre para o mesmo</p>
+            <img src="./img/reverseproxy-nginxconf-hash.png" alt="" width="700">
+          </section>
+          <section>
+            <p>Ponderamento - pode ser usado em qualquer modo</p>
+            <img src="./img/reverseproxy-nginxconf-weight.png" alt="" width="700">
+          </section>
+          <section>
+            <p>Veja o arquivo <code>docker-compose.yml</code></p>
+          </section>
+          <section>
+            <p>Veja o arquivo <code>app/index.js</code></p>
+            <img src="./img/reverseproxy-node.png" alt="">
+          </section>
+          <section>
+            <p>Vamos rodar</p>
+            <img src="./img/reverseproxy-run-docker.png" alt="">
+          </section>
         </section>
 
 
@@ -382,6 +450,11 @@
           <p>Show me!</p>
         </section>
 
+
+
+
+
+
         <!-- Remoção de if e else desnecessário -->
         <section>
           <h3>Removendo código inútil</h3>
@@ -389,6 +462,11 @@
             <h4>Conteúdo aqui</h4>
           </section>
         </section>
+
+
+
+
+
 
         <!-- HashMaps (dar exemplo quando precisamos de informações que ainda não existem) -->
         <section>
@@ -398,6 +476,11 @@
           </section>
         </section>
 
+
+
+
+
+
         <!-- Remoção de libs externas -->
         <section>
           <h3>Usando menos dependências</h3>
@@ -405,6 +488,11 @@
             <h4>Conteúdo aqui</h4>
           </section>
         </section>
+
+
+
+
+
 
         <!-- Uso de loops (map X For) -->
         <section>
@@ -414,6 +502,11 @@
           </section>
         </section>
 
+
+
+
+
+
         <!-- Paralelismo (Falar do promise.all com exemplos) -->
         <section>
           <h3>Tudo ao mesmo tempo</h3>
@@ -422,10 +515,27 @@
           </section>
         </section>
 
+
+
+        <!-- Cluster API -->
+        <section>
+          <h3>Pode sim ser Multi thread</h3>
+          <section>
+            <h4>Conteúdo aqui</h4>
+          </section>
+        </section>
+
+
+
+
         <section>
           <h2>Exercício</h2>
           <p>Remova os problemas de código do arquivo a seguir</p>
         </section>
+
+
+
+
 
 
         <!-- Usando cache com Catbox e Redis -->
@@ -438,12 +548,20 @@
         </section>
 
 
+
+
+
+
         <!-- Profiling -->
         <section>
           <h1>Quando nada mais der certo</h1>
           <p>Vamos usar as <i>big guns</i></p>
         </section>
 
+
+
+
+        <!-- Nativo -->
         <section>
           <h2>Profiler</h2>
           <section>
@@ -454,6 +572,12 @@
           </section>
         </section>
 
+
+
+
+
+
+
         <!-- Memory leaks -->
         <section>
           <h1>Memory Leaks</h1>
@@ -461,6 +585,18 @@
           <!-- Testes de memory leaks -->
           <!-- Identificando um memory leak -->
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- Projeto -->
