@@ -722,10 +722,31 @@
 
         <!-- Usando cache com Catbox e Redis -->
         <section>
-          <h2>Cache a nível de aplicação</h2>
+          <h3>Cache a nível de aplicação</h3>
           <!-- Usando Redis e Catbox + Hapijs -->
           <section>
-            <h4>Conteúdo aqui</h4>
+            <h4>Se você não tem acesso direto à infraestrutura, pode optar por implementar o cache direto em aplicação</h4>
+          </section>
+          <section><img src="./img/node-redis-cache-diagram.png" alt="" width="500"></section>
+          <section>
+            <h4>A chave de cache será a rota (ou um hash) e o valor será o HTML</h4>
+          </section>
+          <section>
+            <h4>Vamos testar</h4>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+          <section>
+            <p>Abra a pasta <code>exemplo-node-hapi-cacheserver</code> da pasta <code>palestra-performance-nodejs</code></p>
+            <p>Execute <code>npm install</code></p>
+            <p>Execute <code>npm start</code></p>
+            <p>Acesse <code>localhost:7000</code></p>
+          </section>
+          <section>
+            <h3>Vamos checar o cache</h3>
+            <img src="./img/redisclipng.png" alt="">
+          </section>
+          <section>
+            <h1>Vamos ver o que está acontecendo</h1>
           </section>
         </section>
 
