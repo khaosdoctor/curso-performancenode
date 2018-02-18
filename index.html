@@ -766,27 +766,77 @@
 
         <!-- Nativo -->
         <section>
-          <h2>Profiler</h2>
           <section>
-            <h4>Profiling nativo</h4>
+            <h1>Profiler</h1>
           </section>
           <section>
-            <h4>Flamegraphs</h4>
+            <h2>Profiling nativo</h2>
+            <p>Yes we can</p>
+          </section>
+          <section>
+            <h2>O que é profiling?</h2>
+          </section>
+          <section>
+            <h3>Uma ferramenta que nos ajuda a encontrar gargalos</h3>
+          </section>
+          <section>
+            <h4>Vamos testar</h4>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+          <section>
+            <p>Abra a pasta <code>exemplo-node-profiling</code></p>
+            <p>Rode <code>node --prof index.js</code></p>
+            <p>Agora execute <code>node --prof-process *.log > process.log</code></p>
+          </section>
+          <section>
+            <h1>Vamos analisar</h1>
+          </section>
+          <section>
+            <p>Remova todos os arquivos <code>isolated-xxxxx.log</code></p>
+            <p>Rode <code>node --prof index-optimized.js</code></p>
+            <p>Agora execute <code>node --prof-process *.log > process-optimized.log</code></p>
+          </section>
+          <section>
+            <h1>Vamos analisar</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Flamegraphs</h1>
+          </section>
+          <section>
+            <h3>O que são flamegraphs?</h3>
+          </section>
+          <section>
+            <p>São uma forma mais visual de verificar tempos de CPU</p>
+          </section>
+          <section><img src="https://gwb.blob.core.windows.net/akraus1/WindowsLiveWriter/VisualizeYourCallstacksViaFlamegraphs_12B95/image_thumb.png" alt="" width="1000"></section>
+          <section>
+            <h4>Vamos testar</h4>
+            <img src="img/livedemo-1.png" alt="">
+          </section>
+          <section>
+            <p>Entre na pasta <code>exemplo-node-flamegraph</code></p>
+            <p>Rode <code>npm install</code> e <code>npm run terms 38</code></p>
+            <p>Veja o flamegraph</p>
+          </section>
+          <section>
+            <h4>Estamos usando a lib <code>0x</code> para gerar os gráficos</h4>
+            <img src="https://raw.githubusercontent.com/davidmarkclements/0x/master/assets/0x-logo.png" alt="">
+          </section>
+          <section>
+            <h1>Analisando</h1>
           </section>
         </section>
 
 
 
 
-
-
-
         <!-- Memory leaks -->
         <section>
-          <h1>Memory Leaks</h1>
-          <p>Seu pesadelo</p>
-          <!-- Testes de memory leaks -->
-          <!-- Identificando um memory leak -->
+          <h1>Exercício Final</h1>
+          <p>Rode qualquer um dos exemplos de código desta apresentação e extraia deles o Flamegraph e o profile, tente explicar o que está acontecendo</p>
         </section>
 
 
@@ -889,6 +939,9 @@
           <h1>Referências</h1>
           <p>
             - <a href="https://nodejs.org/" target="_blank">Node.js: Página oficial</a> <br>
+            - <a href="https://blog.ghaiklor.com/profiling-nodejs-applications-1609b77afe4e" target="_blank">Profiling node applications</a> <br>
+            - <a href="https://blog.ghaiklor.com/how-v8-optimises-javascript-code-a0f3bbd46ac9" target="_blank">Como o V8 otimiza o Node</a> <br>
+            - <a href="https://blog.ghaiklor.com/optimizations-tricks-in-v8-d284b6c8b183" target="_blank">Tecnicas de otimização do V8</a> <br>
           </p>
         </section>
 
