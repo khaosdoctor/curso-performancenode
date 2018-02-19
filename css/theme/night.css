@@ -19,12 +19,12 @@ body {
   color: #eee; }
 
 ::selection {
-  color: #fff;
+  color: #1d1d1d;
   background: #e7ad52;
   text-shadow: none; }
 
 ::-moz-selection {
-  color: #fff;
+  color: #1d1d1d;
   background: #e7ad52;
   text-shadow: none; }
 

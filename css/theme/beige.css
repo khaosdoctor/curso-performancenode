@@ -25,12 +25,12 @@ body {
   color: #333; }
 
 ::selection {
-  color: #fff;
+  color: #1d1d1d;
   background: rgba(79, 64, 28, 0.99);
   text-shadow: none; }
 
 ::-moz-selection {
-  color: #fff;
+  color: #1d1d1d;
   background: rgba(79, 64, 28, 0.99);
   text-shadow: none; }
 

@@ -11,14 +11,14 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #1c201c;
-  background: -moz-radial-gradient(center, circle cover, #575f55 0%, #1c201c 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #575f55), color-stop(100%, #1c201c));
-  background: -webkit-radial-gradient(center, circle cover, #575f55 0%, #1c201c 100%);
-  background: -o-radial-gradient(center, circle cover, #575f55 0%, #1c201c 100%);
-  background: -ms-radial-gradient(center, circle cover, #575f55 0%, #1c201c 100%);
-  background: radial-gradient(center, circle cover, #575f55 0%, #1c201c 100%);
-  background-color: #2b2b2b; }
+  background: #4e564d;
+  background: -moz-radial-gradient(center, circle cover, #575F55 0%, #4e564d 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #575F55), color-stop(100%, #4e564d));
+  background: -webkit-radial-gradient(center, circle cover, #575F55 0%, #4e564d 100%);
+  background: -o-radial-gradient(center, circle cover, #575F55 0%, #4e564d 100%);
+  background: -ms-radial-gradient(center, circle cover, #575F55 0%, #4e564d 100%);
+  background: radial-gradient(center, circle cover, #575F55 0%, #4e564d 100%);
+  background-color: #575F55; }
 
 .reveal {
   font-family: "Lato", sans-serif;
@@ -27,13 +27,13 @@ body {
   color: #eee; }
 
 ::selection {
-  color: #fff;
-  background: #188f00;
+  color: #1d1d1d;
+  background: #5eff66;
   text-shadow: none; }
 
 ::-moz-selection {
-  color: #fff;
-  background: #188f00;
+  color: #1d1d1d;
+  background: #5eff66;
   text-shadow: none; }
 
 .reveal .slides > section,
@@ -213,20 +213,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #13ec30;
+  color: #1ec22c;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #71f487;
+  color: #60e66b;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #0da50d; }
+  background: #14801d; }
 
 /*********************************************
  * IMAGES
@@ -248,21 +248,21 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #25ec13;
+  border-color: #1ec22c;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #097925; }
+  color: #1ec22c; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #0c960c; }
+  color: #1ec22c; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);

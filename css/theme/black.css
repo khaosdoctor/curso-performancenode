@@ -21,12 +21,12 @@ body {
   color: #fff; }
 
 ::selection {
-  color: #fff;
+  color: #1d1d1d;
   background: #bee4fd;
   text-shadow: none; }
 
 ::-moz-selection {
-  color: #fff;
+  color: #1d1d1d;
   background: #bee4fd;
   text-shadow: none; }
 

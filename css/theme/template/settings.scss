@@ -2,7 +2,7 @@
 // overridden by the super-theme
 
 // Background of the presentation
-$backgroundColor: #2b2b2b;
+$backgroundColor: #575F55;
 
 // Primary/body text
 $mainFont: 'Lato', sans-serif;
@@ -29,12 +29,12 @@ $heading3Size: 1.55em;
 $heading4Size: 1.00em;
 
 // Links and actions
-$linkColor: #13DAEC;
+$linkColor: rgb(30, 194, 44);
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: #FF5E99;
-$selectionColor: #fff;
+$selectionBackgroundColor: rgb(94, 255, 102);
+$selectionColor: rgb(29, 29, 29);
 
 // Generates the presentation background, can be overridden
 // to return a background image or gradient
